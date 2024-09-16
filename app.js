@@ -13,7 +13,7 @@ var handlebars = require('hbs');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app_sever', 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'views'));
 
 // register handlebars partials
 handlebars.registerPartials(__dirname + '/app_server/views/partials');
