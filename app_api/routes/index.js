@@ -4,7 +4,8 @@ const tripsController = require('../controllers/trips');
 
 // Define the route for /trips (with a leading slash)
 router.route('/trips')
-    .get(tripsController.tripsList);  // GET method for tripsList
+    .get(tripsController.tripsList)  // GET method for tripsList
+    .post(tripsController.tripsAddTrip); // Post Method Adds a Trip
 
 // Get Method routes tripsFindByCode - require parameter
 router
