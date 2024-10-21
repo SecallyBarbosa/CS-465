@@ -18,4 +18,14 @@ export class TripDataService {
   addTrip(formData: Trip) : Observable<Trip> {
   return this.http.post<Trip>(this.url, formData);
   }
+
+  getTrip(tripCode: string) : Observable<Trip> {
+    //console.log('Inside TripDataService::getTrips');
+return this.http.get<Trip>(this.url + '/' + tripCode);
+  }
+updateTrip(formData: Trip) : Observable<Trip> {
+  //conosole.log('Inside TripDataService::addTrips');
+  return this.http.put<Trip>(this.url + '/' + formData.code, formData);
+
+  }
 }
